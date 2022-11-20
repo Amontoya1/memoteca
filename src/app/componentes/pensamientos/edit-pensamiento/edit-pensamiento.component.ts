@@ -1,0 +1,44 @@
+import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Pensamiento } from '../pensamiento';
+import { PensamientoService } from '../pensamiento.service';
+
+@Component({
+  selector: 'amr-edit-pensamiento',
+  templateUrl: './edit-pensamiento.component.html',
+  styleUrls: ['./edit-pensamiento.component.css']
+})
+export class EditPensamientoComponent implements OnInit {
+  pensamento: Pensamiento = {
+    id: 0,
+    conteudo: '',
+    autoria: '',
+    modelo: ''
+  }
+
+
+  constructor(
+    private service: PensamientoService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
+
+  ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id')
+    this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
+      this.pensamento = pensamento
+    })
+  }
+
+  editarPensamento() {
+    this.service.editar(this.pensamento).subscribe(() => {
+      this.router.navigate(['/listarPensamento'])
+    })
+
+  }
+
+  cancelar() {
+    this.router.navigate(['/listarPensamento'])
+  }
+
+}

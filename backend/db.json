@@ -1,0 +1,46 @@
+{
+  "pensamientos": [
+    {
+      "id": 2,
+      "conteudo": "Viajar Curitiba",
+      "autoria": "Dev Alura",
+      "modelo": "modelo2"
+    },
+    {
+      "id": 3,
+      "conteudo": "Angular é o melhor'",
+      "autoria": "Dev Alura",
+      "modelo": "modelo3"
+    },
+    {
+      "id": 4,
+      "conteudo": "",
+      "autoria": "",
+      "modelo": "modelo1"
+    },
+    {
+      "id": 5,
+      "conteudo": "Quiero irme a España",
+      "autoria": "Andrea Montoya",
+      "modelo": "modelo1"
+    },
+    {
+      "id": 6,
+      "conteudo": "Viajar",
+      "autoria": "Andrea",
+      "modelo": "modelo1"
+    },
+    {
+      "id": 7,
+      "conteudo": "Viajar",
+      "autoria": "Andrea",
+      "modelo": "modelo1"
+    },
+    {
+      "id": 8,
+      "conteudo": "Viajar a Italia, Comer Pizza",
+      "autoria": "Andrea",
+      "modelo": "modelo2"
+    }
+  ]
+}
